@@ -1,6 +1,111 @@
 /* @import url(variables.css); */
 
-#app{
+
+:root{
+  font-family: 'Lexend Deca', sans-serif;
+
+  --black: #000;
+  --white: #fff;
+  --yellow: #fde089;
+  --dark-yellow: #fcd45a;
+  --light-blue: #b7edf2;
+  --pink: #fa69a1;
+  --med-blue: #06588a;
+  --dark-blue:#043d6f;
+  --green: #628d77;  
+  --dark-green: #4e715f;
+
+  /* intentions */
+  --background: var(--pink);
+  --head: var(--light-blue);
+  --interface: var(--yellow);
+  --textcolor: var(--dark-blue);
+  --border: var(--med-blue);
+}
+
+.bright{
+  --background: var(--pink);
+  --head: var(--light-blue);
+  --interface: var(--yellow);
+  --textcolor: var(--dark-blue);
+  --border: var(--med-blue);
+  --fade: var(--dark-yellow);
+}
+
+.muted{
+  --background: var(--med-blue);
+  --head: var(--dark-blue);
+  --interface: var(--green);
+  --textcolor: var(--white);
+  --border: var(--white);
+  --buttonborder: var(--white);
+  --fade: var(--dark-green);
+}
+
+.header{
+  background-color: var(--head);
+  color: var(--textcolor);
+  text-align: center;
+  padding: 2vh;
+  margin: 3vh 30vw;
+  border: 5px solid var(--border);
+  border-radius: 3vh;
+}
+
+body{
+  background-color: var(--background); 
+}
+
+.UI{
+  text-align: center;
+}
+.button{
+  background-color: var(--interface);
+  border: none;
+  font-size: larger;
+  padding: 1.8vh 8vw;
+  margin-top: 15vh;
+  color: var(--textcolor);
+}
+.button:hover{
+  background-color: var(--fade);
+}
+
+#click{
+  text-align: center;
+}
+#btn{
+  font-size: medium;
+  padding: 0.5vh 1vh;
+  border: none;
+  border: 2px solid var(--border);
+  color: var(--textcolor);
+  background-color: var(--head);
+  border-radius: 2vh;
+  transition: transform 0.5s;
+}
+#btn:hover{
+  transform: scale(1.1);
+}
+
+.card{
+  color: var(--textcolor);
+  background-color: var(--interface);
+  border: 3px solid var(--fade);
+  padding: 2vh;
+  margin: 5vh 20vw;
+}
+
+.image{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#titles{
+  text-align: center;
+  text-decoration: underline;
+}
+/* #app{
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,5 +124,5 @@
   color: white;
   background-color: red;
   text-align: center;
-}
+} */
 
