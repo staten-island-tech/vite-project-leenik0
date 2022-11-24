@@ -1,0 +1,17 @@
+.bright{
+    --background: var(--pink);
+    --head: var(--light-blue);
+    --interface: var(--yellow);
+    --textcolor: var(--dark-blue);
+    --border: var(--med-blue);
+    --fade: var(--dark-yellow);
+  }
+  
+  .muted{
+    --background: var(--med-blue);
+    --head: var(--dark-blue);
+    --interface: var(--green);
+    --textcolor: var(--white);
+    --border: var(--white);
+    --fade: var(--dark-green);
+  }

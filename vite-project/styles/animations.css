@@ -1,0 +1,15 @@
+.UI,
+.top {
+    animation: 0.5s slideIn;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

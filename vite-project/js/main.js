@@ -1,14 +1,13 @@
 import "../styles/style.css";
-import { menu } from "./menu";
-import javascriptLogo from "../javascript.svg";
-import { setupCounter } from "../counter.js";
+import { inter } from "./theme";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+inter();
 AOS.init();
+
 const about = document.getElementById("about");
 const bands = document.getElementById("bands");
-const box = document.getElementById("container");
+const box = document.getElementById("details");
 let wiki =
   "Select your own unit members and play through “Live Show” with 5 difficulties to choose from! Tap, hold, and flick your way to the end to reach the highest score; earn XP and various items to level up your characters and unlock outfits.";
 let leoneed =
@@ -62,11 +61,12 @@ const content = [
 ];
 
 bands.addEventListener("click", function () {
+  box.innerHTML = "";
   const filter1 = content.filter((x) => x.type === "band");
   filter1.forEach((element) => {
-    box.insertAdjacentHTML(
+    details.insertAdjacentHTML(
       "beforeend",
-      `<div class="card">
+      `<div class="card" data-aos="fade-up">
       <h1 id="titles">${element.name}</h1>
       <h2>${element.desc}</h2>
       <img class="image" src="${element.img}" alt="Characters">
@@ -76,11 +76,12 @@ bands.addEventListener("click", function () {
 });
 
 about.addEventListener("click", function () {
+  box.innerHTML = "";
   const filter1 = content.filter((x) => x.type === "desc");
   filter1.forEach((element) => {
-    box.insertAdjacentHTML(
+    details.insertAdjacentHTML(
       "beforeend",
-      `<div class="card">
+      `<div class="card" data-aos="fade-up">
       <h1 id="titles">${element.name}</h1>
       <h2>${element.desc}</h2>
       <img class="image" src="${element.img}" alt="Characters">
@@ -88,40 +89,3 @@ about.addEventListener("click", function () {
     );
   });
 });
-document.querySelector("#btn").addEventListener("click", function () {
-  if (document.body.classList.contains("bright")) {
-    document.body.classList.add("muted");
-    document.body.classList.remove("bright");
-  } else {
-    document.body.classList.add("bright");
-    document.body.classList.remove("muted");
-  }
-});
-
-// about.addEventListener("click", function () {
-//   console.log("hhh");
-// });
-
-// bands.addEventListener("click", function () {
-//   console.log("hello");
-// });
-
-// document.querySelector("#app").innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="/vite.svg" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `;
-
-// setupCounter(document.querySelector("#counter"));
